@@ -14,13 +14,15 @@ Text Domain: the-classicpress-theme-child
 
 /* ==========================
    Child theme footer
+   Based on parent footer colors
    ========================== */
 
 #prefooter {
 	padding: 1.5rem 0;
-	border-top: 1px solid #d9d9d9;
-	border-bottom: 1px solid #d9d9d9;
-	background: #f7f7f7;
+	background: #034a59;
+	border-top: 0;
+	border-bottom: 1px solid #006b81;
+	color: #fff;
 }
 
 .prefooter-inner {
@@ -60,14 +62,30 @@ Text Domain: the-classicpress-theme-child
 	padding: 0;
 }
 
-.footer-menu-nav .nav a,
-.social-menu-nav .nav a {
+#prefooter a,
+#prefooter a:visited {
+	color: #fff;
 	text-decoration: none;
+	border-bottom: 0;
+}
+
+#prefooter a:hover,
+#prefooter a:focus {
+	color: #fff;
+	text-decoration: underline;
 }
 
 #colophon {
 	padding: 2.5rem 0;
-	background: #ffffff;
+	background: #034a59;
+	color: #fff;
+}
+
+#colophon p,
+#colophon li,
+#colophon .footer-widget-title,
+#colophon .widget-title {
+	color: #fff;
 }
 
 .footer-widgets {
@@ -92,6 +110,7 @@ Text Domain: the-classicpress-theme-child
 	margin: 0 0 0.75rem;
 	font-size: 1.1rem;
 	line-height: 1.3;
+	color: #fff;
 }
 
 .footer-widget-column ul {
@@ -104,15 +123,25 @@ Text Domain: the-classicpress-theme-child
 	margin-bottom: 0.5rem;
 }
 
-.footer-widget-column a {
+#colophon a,
+#colophon a:visited {
+	color: #fff;
 	text-decoration: none;
+	border-bottom: 0;
+}
+
+#colophon a:hover,
+#colophon a:focus {
+	color: #fff;
+	text-decoration: underline;
 }
 
 #legal {
 	padding: 1rem 0;
-	border-top: 1px solid #d9d9d9;
-	background: #f7f7f7;
+	background: #002e38;
 	font-size: 0.95rem;
+	color: #fff;
+	border-top: 0;
 }
 
 .cplegal {
@@ -135,26 +164,25 @@ Text Domain: the-classicpress-theme-child
 .cppolicy .sep {
 	display: inline-block;
 	margin: 0 0.35rem;
+	color: #ddd;
 }
 
 .cpcopyright p,
 .cppolicy p {
 	margin: 0;
+	color: #fff;
 }
 
-/* Footer links */
-#prefooter a,
-#colophon a,
-#legal a {
+#legal a,
+#legal a:visited {
+	color: #ddd;
 	text-decoration: none;
+	border-bottom: 0;
 }
 
-#prefooter a:hover,
-#prefooter a:focus,
-#colophon a:hover,
-#colophon a:focus,
 #legal a:hover,
 #legal a:focus {
+	color: #fff;
 	text-decoration: underline;
 }
 
