@@ -14,15 +14,20 @@ Text Domain: the-classicpress-theme-child
 
 /* ==========================
    Child theme footer
-   Based on parent footer colors
+   Gray utility bar + violet divider + teal footer
    ========================== */
 
 #prefooter {
-	padding: 1.5rem 0;
-	background: #034a59;
+	padding: 0.2rem 0;
+	background: #767676;
 	border-top: 0;
-	border-bottom: 1px solid #006b81;
+	border-bottom: 10px solid #89288f;
 	color: #fff;
+}
+
+#prefooter .classic.prefooter-inner {
+	padding: 0.25rem 0;
+	margin: 0 auto;
 }
 
 .prefooter-inner {
@@ -30,7 +35,7 @@ Text Domain: the-classicpress-theme-child
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	gap: 1rem 2rem;
+	gap: 0 2rem;
 }
 
 .prefooter-left,
@@ -42,14 +47,25 @@ Text Domain: the-classicpress-theme-child
 	text-align: right;
 }
 
+.footer-menu-nav,
+.social-menu-nav,
 .footer-menu-nav .nav,
-.social-menu-nav .nav {
-	list-style: none;
+.social-menu-nav .nav,
+.footer-menu-nav ul,
+.social-menu-nav ul {
 	margin: 0;
 	padding: 0;
+}
+
+.footer-menu-nav .nav,
+.social-menu-nav .nav,
+.footer-menu-nav ul,
+.social-menu-nav ul {
+	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.75rem 1.25rem;
+	align-items: center;
+	gap: 0 1rem;
 }
 
 .prefooter-right .social-nav {
@@ -57,13 +73,20 @@ Text Domain: the-classicpress-theme-child
 }
 
 .footer-menu-nav .nav li,
-.social-menu-nav .nav li {
+.social-menu-nav .nav li,
+.footer-menu-nav ul li,
+.social-menu-nav ul li {
 	margin: 0;
 	padding: 0;
+	line-height: 1;
 }
 
 #prefooter a,
 #prefooter a:visited {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
 	color: #fff;
 	text-decoration: none;
 	border-bottom: 0;
@@ -76,7 +99,8 @@ Text Domain: the-classicpress-theme-child
 }
 
 #colophon {
-	padding: 2.5rem 0;
+	margin: 0;
+	padding: 0.5rem 0 2rem;
 	background: #034a59;
 	color: #fff;
 }
