@@ -21,29 +21,6 @@ function the_classicpress_theme_child_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'the_classicpress_theme_child_enqueue_styles' );
 
-<?php
-/**
- * Enqueue parent and child theme styles.
- */
-function the_classicpress_theme_child_enqueue_styles() {
-	$parent_style = 'the-classicpress-theme-parent-style';
-
-	wp_enqueue_style(
-		$parent_style,
-		get_template_directory_uri() . '/style.css',
-		array(),
-		wp_get_theme( get_template() )->get( 'Version' )
-	);
-
-	wp_enqueue_style(
-		'the-classicpress-theme-child-style',
-		get_stylesheet_directory_uri() . '/style.css',
-		array( $parent_style ),
-		wp_get_theme()->get( 'Version' )
-	);
-}
-add_action( 'wp_enqueue_scripts', 'the_classicpress_theme_child_enqueue_styles' );
-
 /**
  * Unregister the parent theme footer widget area.
  */
