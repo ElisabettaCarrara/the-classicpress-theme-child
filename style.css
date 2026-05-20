@@ -1,0 +1,263 @@
+/*!
+Theme Name: The ClassicPress Theme Child
+Description: Child theme for The ClassicPress Theme. Adds a full-width page template and a custom footer with three widget areas.
+Author: Elisabetta Carrara
+Author URI: https://elica-webservices.it/
+Template: the-classicpress-theme
+Version: 1.0.0
+Requires PHP: 8.0
+Requires CP: 2.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+Text Domain: the-classicpress-theme-child
+*/
+
+/* ==========================
+   Child theme footer
+   ========================== */
+
+#prefooter {
+	padding: 1.5rem 0;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	background: #f7f7f7;
+}
+
+.prefooter-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem 2rem;
+}
+
+.prefooter-left,
+.prefooter-right {
+	flex: 1 1 300px;
+}
+
+.prefooter-right {
+	text-align: right;
+}
+
+.footer-menu-nav .nav,
+.social-menu-nav .nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1.25rem;
+}
+
+.prefooter-right .social-nav {
+	justify-content: flex-end;
+}
+
+.footer-menu-nav .nav li,
+.social-menu-nav .nav li {
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu-nav .nav a,
+.social-menu-nav .nav a {
+	text-decoration: none;
+}
+
+#colophon {
+	padding: 2.5rem 0;
+	background: #ffffff;
+}
+
+.footer-widgets {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2rem;
+}
+
+.footer-widget-column {
+	min-width: 0;
+}
+
+.footer-widget-column .widget {
+	margin-bottom: 1.5rem;
+}
+
+.footer-widget-column .widget:last-child {
+	margin-bottom: 0;
+}
+
+.footer-widget-title {
+	margin: 0 0 0.75rem;
+	font-size: 1.1rem;
+	line-height: 1.3;
+}
+
+.footer-widget-column ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-widget-column li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-widget-column a {
+	text-decoration: none;
+}
+
+#legal {
+	padding: 1rem 0;
+	border-top: 1px solid #d9d9d9;
+	background: #f7f7f7;
+	font-size: 0.95rem;
+}
+
+.cplegal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem 1.5rem;
+}
+
+.cpcopyright,
+.cppolicy {
+	flex: 1 1 280px;
+}
+
+.cppolicy {
+	text-align: right;
+}
+
+.cppolicy .sep {
+	display: inline-block;
+	margin: 0 0.35rem;
+}
+
+.cpcopyright p,
+.cppolicy p {
+	margin: 0;
+}
+
+/* Footer links */
+#prefooter a,
+#colophon a,
+#legal a {
+	text-decoration: none;
+}
+
+#prefooter a:hover,
+#prefooter a:focus,
+#colophon a:hover,
+#colophon a:focus,
+#legal a:hover,
+#legal a:focus {
+	text-decoration: underline;
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+	.footer-widgets {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+	.prefooter-inner,
+	.cplegal {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.prefooter-right,
+	.cppolicy {
+		text-align: left;
+	}
+
+	.prefooter-right .social-nav {
+		justify-content: flex-start;
+	}
+
+	.footer-widgets {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ==========================
+   Full-width page template
+   No sidebar, centered container
+   ========================== */
+
+.full-width-primary {
+	width: 100%;
+	margin: 0;
+	padding: 0 1.5rem;
+	box-sizing: border-box;
+}
+
+.page-full-width {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Keep the page content centered and readable */
+.page-full-width .entry-header,
+.page-full-width .entry-content,
+.page-full-width .post-thumbnail,
+.page-full-width .comments-area {
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Prevent unexpected narrow limits from the parent theme */
+.full-width-primary article,
+.full-width-primary .hentry,
+.full-width-primary .page {
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Images stay responsive inside the wider container */
+.page-full-width img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Optional: make embedded content scale nicely */
+.page-full-width iframe,
+.page-full-width embed,
+.page-full-width object {
+	max-width: 100%;
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+	.full-width-primary {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+	.full-width-primary {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.page-full-width {
+		max-width: 100%;
+	}
+}
